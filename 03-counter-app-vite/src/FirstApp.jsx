@@ -6,7 +6,7 @@ const newMessage = {
     message: 'Hola mundo',
     title: 'Fernando'
 };
-
+ 
 // Fragment, se utiliza para agrupar multiples etiquetas de html, sin necesidad de agrgar un div para agrupar y agrega dicho componente inecesario
 
 // Se puede utilizar de dos formas, con la etiqueta <Fragment></Fragment>, pero necesitas importar "import {Fragment} from 'react", o se puede utiliza simplemente poniendo "<>componentes</>", sin necesidad de importar el fragmento, se hace automaticamente, 
@@ -18,7 +18,8 @@ export const FirsApp = ({title,subtitle,name}) => {
     return (<>
 {/*si queremos rendirizar la información de un objeto, se puede hacer convirtiendo el objeto a un json string con el metodo que se muestra en la siguiente linea.*/}
         {/* <code>{JSON.stringify(newMessage)}</code> */} 
-        <h1>{title}</h1>
+        <h1 data-testid="test-title">{title}</h1>
+        <p>{subtitle}</p>
         <p>{subtitle}</p>
         <p>{name}</p>
     </>);
@@ -26,11 +27,11 @@ export const FirsApp = ({title,subtitle,name}) => {
 
 FirsApp.propTypes={
     title: PropTypes.string.isRequired,
-    subtitle: PropTypes.number.isRequired
+    subtitle: PropTypes.string.isRequired
 }
 
 FirsApp.defaultProps={
-    title:'No hay titulo',
+    // title:'No hay titulo',Q
     subtitle:'No hay subtitule',
     name:'Hector Puga'
 }
