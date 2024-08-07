@@ -1,0 +1,1 @@
+No se pudo elaborar debido a que el video esta desactualizado, ya que la api que se estaba utilizando es una que ya no existe, se cambio por la api de pokemon, pero no hubo actualización con esa api, para poder usar el useLayoutEffect
